@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+
+    <!-- remix icon cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/product-list1.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+        <header class="header">
+                <a href="#home.html" class="logo"><i class="ri-menu-line"></i>VOUCHER CARD</a>
+                <form action="#" class="search-form">
+                    <input type="search" placeholder="search anything" id="search-box">
+                    <label for="search-box" class="ri-search-line"></label>
+                </form>
+                <div class="icons">
+                    <div id="menu-btn" class="ri-menu-line"></div>
+                    <div id="search-btn" class="ri-search-line"></div>
+                    <div id="cart-btn" class="ri-shopping-cart-line"></div>
+                    <div id="login-btn" class="ri-user-line"></div>
+
+                </div>
+
+            </header>
+    <!-- header section ends  -->
+
+
+    <!-- closer btn  -->
+    <div id="closer" class="ri-close-line"></div>
+
+    <!-- navbar start  -->
+            <div class="navbar">
+        <a href="home.html">Home</a><a href="shop.html">shop</a><a href="about.html">about</a><a href="team.html">team</a><a href="product-list.html">blog</a><a href="contact.html">contact</a>
+    </div>
+    <!-- navbar end  -->
+
+
+    <!-- shopping cart start  -->
+    
+    <div class="shopping-cart">
+        <div class="box">
+            <i class="ri-close-line close-icon"></i>
+            <img src="image/cart-img-1.jpg" alt="">
+            <div class="content">
+                <h3>modern furniture</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">140.00rs</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="ri-close-line close-icon"></i>
+            <img src="image/cart-img-2.jpg" alt="">
+            <div class="content">
+                <h3>modern furniture</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">140.00rs</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="ri-close-line close-icon"></i>
+            <img src="image/cart-img-3.jpg" alt="">
+            <div class="content">
+                <h3>modern furniture</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">140.00rs</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="ri-close-line close-icon"></i>
+            <img src="image/cart-img-4.jpg" alt="">
+            <div class="content">
+                <h3>modern furniture</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">140.00rs</span>
+            </div>
+        </div>
+        <h3 class="total">Total : <span>560 Rs</span> </h3>
+        <a href="#" class="checkoutbtn">checkout</a>
+        
+        
+
+
+
+    </div>
+
+    <!-- shopping cart end  -->
+
+
+    <!-- login form start  -->
+     <div class="login-form">
+
+        <div class="container">
+          <div class="card">
+            <div class="inner-box" id="card">
+              <div class="card-front">
+                <h1>SIGN UP</h1>
+                <form action="">
+                    <img  id="name" src="/name.png" alt="">
+                    <input
+                    type="text"
+                    class="input-box"
+                    placeholder="Your Name"
+                    required
+                  />
+                    <img id="email" src="/mail-outline.svg" alt="">
+                  <input
+                    type="email"
+                    class="input-box"
+                    placeholder="Email"
+                    required
+                  />
+                  <img id="pass1" src="/lock-closed-outline.svg" alt="">
+                  <input
+                    type="password"
+                    class="input-box"
+                    placeholder="Password"
+                    required
+                  />
+                  <img id="pass2" src="/lock-closed-outline.svg" alt="">
+                  <input
+                    type="password"
+                    class="input-box"
+                    placeholder="Confirm Password"
+                    required
+                  />
+                  <label id="rem">
+                    <input type="checkbox" /><span>Remember Me</span>
+                  </label>
+                  <a href="#" id="forgot">Forgot Password</a>
+                  <button type="submit" class="sumbit-btn">Sumbit</button>
+                  <span id="accountregister">Don't have a account </span>
+                  <button type="button" class="btn" onclick="openregister()">Register Now</button>
+                </form>
+              </div>
+              <div class="card-back">
+                <h1>LOGIN</h1>
+                <form action="">
+                    <img id="email" src="/mail-outline.svg" alt="">
+                  <input
+                    type="email"
+                    class="input-box"
+                    placeholder="Email"
+                    required
+                  />
+                  <img id="pass1" src="/lock-closed-outline.svg" alt="">
+                  <input
+                    type="password"
+                    class="input-box"
+                    placeholder="Password"
+                    required
+                  />
+                  <label id="remback">
+                    <input type="checkbox" /><span>Remember Me</span>
+                  </label>
+                  <a href="#" id="forgot">Forgot Password</a>
+                  <button type="submit" class="sumbit-btn">Sumbit</button>
+                  <span id="accountregister">Already have a account </span>
+                  <button type="button" onclick="openlogin()" class="btn">Sign In</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- login form end  -->
+
+
+    <!-- product list container start -->
+    <div class="product-container">
+        <div class="product-filter">
+            
+            <div class="filter">
+                <h1>Category Fliter</h1>
+                <div class="category">
+                  <!-- <label for=""><input type="checkbox" name="" id="checkicon">Mens</label>
+                  <label for=""><input type="checkbox" name="" id="">Mens</label>
+                  <label for=""><input type="checkbox" name="" id="">Mens</label>
+                  <label for=""><input type="checkbox" name="" id="">Mens</label>
+                  <label for=""><input type="checkbox" name="" id="">Mens</label> -->
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="product-right-container">
+            <div class="product-items-container">
+              
+               <div class="product-div">
+                <img src="/image/shoes2.jpg" alt="">
+                <span>REEBOK AIWINGS SHOES</span>
+                <div class="rating-price">
+                    <div class="rating">
+                        <i class="ri-star-fill" ></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <div class="product-div-price">
+                        2000RS
+                    </div>
+                    <div class="cart-like">
+                      <i class="ri-heart-line"></i>
+                      <i class="ri-shopping-cart-2-fill"></i>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- product list container end -->
+
+
+    <!-- category section start -->
+
+    <!-- category section end -->
+
+
+    <!-- products section start -->
+
+    <!-- products section end -->
+
+
+
+
+
+
+    <!-- footer section start  -->
+    
+     <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="home.html"><i class="ri-arrow-right-line">Home</i></a>
+          <a href="shope.html"><i class="ri-arrow-right-line">shop</i></a>
+          <a href="about.html"><i class="ri-arrow-right-line">about</i></a>
+          <a href="team.html"><i class="ri-arrow-right-line">team</i></a>
+          <a href="blog.html"><i class="ri-arrow-right-line">blog</i></a>
+          <a href="contact.html"><i class="ri-arrow-right-line">contact</i></a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#"><i class="ri-arrow-right-line">my order</i></a>
+          <a href="#"><i class="ri-arrow-right-line">my wishlist</i></a>
+          <a href="#"><i class="ri-arrow-right-line">my account</i></a>
+          <a href="#"><i class="ri-arrow-right-line">my favorite</i></a>
+          <a href="#"><i class="ri-arrow-right-line">terms of user</i></a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#"><i class="ri-facebook-fill">Facebook</i></a>
+          <a href="#"><i class="ri-twitter-fill">twitter</i></a>
+          <a href="#"><i class="ri-instagram-fill">instagram</i></a>
+          <a href="#"><i class="ri-linkedin-box-fill">linkedin</i></a>
+          <a href="#"><i class="ri-pinterest-fill">pinterest</i></a>
+          <a href="#"><i class="ri-messenger-fill">messenger</i></a>
+         
+        </div>
+        <div class="box">
+          <h3>newsletter</h3>
+          <p>subscribe for latest updates</p>
+          <form action="#">
+            <input type="email" name="" placeholder="Enter your email" id="">
+            <button type="button" class="sum-btn">Subscribe</button>
+          </form>
+        </div>  
+      </div>
+    </section>
+    <section class="credit">
+      Created by Code with Surendra Kumar || all rights reserved!
+    </section> 
+    <!-- footer section end  -->
+   <!-- <iframe src="/footer.html" width="100%" height="100%" frameborder="0" scrolling="yes"></iframe> -->
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <script src="login/script.js"></script>
+    <script src="/js/product-list.js"></script>
+
+
+
+
+    
+
+
+
+</body>
+
+</html>

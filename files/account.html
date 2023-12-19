@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account</title>
+
+    <!-- remix icon cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/account.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="#home.html" class="logo"
+        ><i class="ri-menu-line"></i>VOUCHER CARD</a
+      >
+      <form action="#" class="search-form">
+        <input type="search" placeholder="search anything" id="search-box" />
+        <label for="search-box" class="ri-search-line"></label>
+      </form>
+      <div class="icons">
+        <div id="menu-btn" class="ri-menu-line"></div>
+        <div id="search-btn" class="ri-search-line"></div>
+        <div id="cart-btn" class="ri-shopping-cart-line"></div>
+        <div id="login-btn" class="ri-user-line"></div>
+      </div>
+    </header>
+
+    <!-- header section ends  -->
+
+    <!-- closer btn  -->
+    <div id="closer" class="ri-close-line"></div>
+
+    <!-- navbar start  -->
+
+    <div class="navbar">
+      <a href="home.html">Home</a><a href="shop.html">shop</a
+      ><a href="about.html">about</a><a href="team.html">team</a
+      ><a href="product-list.html">products</a><a href="contact.html">contact</a>
+    </div>
+
+    <!-- navbar end  -->
+
+    <!-- shopping cart start  -->
+
+    <div class="shopping-cart">
+      
+      <div class="box">
+        <i class="ri-close-line close-icon"></i>
+        <img src="image/cart-img-1.jpg" alt="" />
+        <div class="content">
+          <h3>modern furniture</h3>
+          <span class="quantity">1</span>
+          <span class="multiply">x</span>
+          <span class="price">140.00rs</span>
+        </div>
+      </div>
+      <div class="box">
+        <i class="ri-close-line close-icon"></i>
+        <img src="image/cart-img-2.jpg" alt="" />
+        <div class="content">
+          <h3>modern furniture</h3>
+          <span class="quantity">1</span>
+          <span class="multiply">x</span>
+          <span class="price">140.00rs</span>
+        </div>
+      </div>
+      <div class="box">
+        <i class="ri-close-line close-icon"></i>
+        <img src="image/cart-img-3.jpg" alt="" />
+        <div class="content">
+          <h3>modern furniture</h3>
+          <span class="quantity">1</span>
+          <span class="multiply">x</span>
+          <span class="price">140.00rs</span>
+        </div>
+      </div>
+      <div class="box">
+        <i class="ri-close-line close-icon"></i>
+        <img src="image/cart-img-4.jpg" alt="" />
+        <div class="content">
+          <h3>modern furniture</h3>
+          <span class="quantity">1</span>
+          <span class="multiply">x</span>
+          <span class="price">140.00rs</span>
+        </div>
+      </div>
+      <h3 class="total">Total : <span>560 Rs</span></h3>
+      <a href="#" class="checkoutbtn">checkout</a>
+    </div>
+
+    <!-- shopping cart end  -->
+
+    <!-- login form start  -->
+    <!-- <div class="login-form">
+      <div class="container">
+        <div class="card">
+          <div class="inner-box" id="card">
+            <div class="card-front">
+              <h1>SIGN UP</h1>
+              <form action="">
+                <img id="name" src="/name.png" alt="" />
+                <input
+                  type="text"
+                  class="input-box"
+                  placeholder="Your Name"
+                  required
+                />
+                <img id="email" src="/mail-outline.svg" alt="" />
+                <input
+                  type="email"
+                  class="input-box"
+                  placeholder="Email"
+                  required
+                />
+                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Password"
+                  required
+                />
+                <img id="pass2" src="/lock-closed-outline.svg" alt="" />
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <label id="rem">
+                  <input type="checkbox" /><span>Remember Me</span>
+                </label>
+                <a href="#" id="forgot">Forgot Password</a>
+                <button type="submit" class="sumbit-btn">Sumbit</button>
+                <span id="accountregister">Don't have a account </span>
+                <button type="button" class="btn" onclick="openregister()">
+                  Register Now
+                </button>
+              </form>
+            </div>
+            <div class="card-back">
+              <h1>LOGIN</h1>
+              <form action="">
+                <img id="email" src="/mail-outline.svg" alt="" />
+                <input
+                  type="email"
+                  class="input-box"
+                  placeholder="Email"
+                  required
+                />
+                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Password"
+                  required
+                />
+                <label id="remback">
+                  <input type="checkbox" /><span>Remember Me</span>
+                </label>
+                <a href="#" id="forgot">Forgot Password</a>
+                <button type="submit" class="sumbit-btn">Sumbit</button>
+                <span id="accountregister">Already have a account </span>
+                <button type="button" onclick="openlogin()" class="btn">
+                  Sign In
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- login form end  -->
+
+
+
+
+<!-- Account page -->
+<div class="Account">
+    <a href="account.html">My Account</a>
+    <a href="orders.html">My Orders</a>
+    <a href="wishlist.html">My Wishlist</a>
+ </div>
+
+<!-- Account page ends -->
+
+
+
+
+
+
+
+    <!-- home section starts  -->
+
+    <section class="home">
+      <div class="slides-container">
+        <div class="slide active">
+          <div class="content">
+            <span>#1 Best Seller</span>
+            <h3>Lymio Hoodies</h3>
+            <p>
+              Veirdo Cotton Fleece Regular Fit Hooded Sweatshirt Full Sleeves
+              Vision of Perfection Front Graphic Printed Jumper Beige Winter
+              Sweatshirt for Men
+            </p>
+            <br />
+            <a href="#" class="shop-btn">shop now</a>
+          </div>
+          <div class="image">
+            <!-- <img src="image/home-img-1.png" alt=""> -->
+            <img src="image/cloth1.png" alt="" />
+            <!-- <img src="/macbook.jpg" alt=""> -->
+          </div>
+        </div>
+        <div class="slide">
+          <div class="content">
+            <span>#1 Best Seller</span>
+            <h3>Handy Chopper</h3>
+            <p>
+              Pigeon by Stovekraft Ultra Premium Handy Chopper with 3 Blades for
+              Effortlessly Chopping Vegetables and Fruits for Your Kitchen
+              (Green, 400 ml, 12420)
+            </p>
+            <a href="#" class="shop-btn">shop now</a>
+          </div>
+          <div class="image">
+            <img src="image/kitchen1.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="slide-next" onclick="next()" class="ri-arrow-right-line"></div>
+      <div id="slide-prev" onclick="prev()" class="ri-arrow-left-line"></div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- banner section starts  -->
+
+    <section class="banner-container">
+      <div class="banner">
+        <img src="image/appletab.jpg" alt="" />
+        <div class="content">
+          <span>limited offer</span>
+          <h3>upto 50% off</h3>
+          <a href="#" class="shop-btn">shop now</a>
+        </div>
+      </div>
+      <div class="banner">
+        <img src="image/bag.jpg" alt="" />
+        <div class="content">
+          <span>limited offer</span>
+          <h3>upto 50% off</h3>
+          <a href="#" class="shop-btn">shop now</a>
+        </div>
+      </div>
+      <div class="banner">
+        <img src="image/shoes2.jpg" alt="" />
+        <div class="content">
+          <span>limited offer</span>
+          <h3>upto 50% off</h3>
+          <a href="#" class="shop-btn">shop now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- banner section ends -->
+
+    <!-- list-items-card -->
+    
+
+    <div class="list-items-card">
+      <div class="card">
+        <a href="about.html">
+          <img src="/image/mobile.jpg" class="card-img-top" alt="..." />
+
+          <h5 class="card-title">Mobiles & Accessories</h5>
+        </a>
+      </div>
+      
+      <div class="card">
+        <a href="about.html">
+          <img src="/image/kitchen.jpg" class="card-img-top" alt="..." />
+  
+          <h5 class="card-title">Home & Kitchen</h5>
+        </a>
+      </div>
+      <div class="card">
+        <a href="about.html">
+          <img src="/image/clothes.jpg" class="card-img-top" alt="..." />
+  
+          <h5 class="card-title">Clothing  & Accessories</h5>
+        </a>
+      </div>
+      <div class="card">
+        <a href="about.html">
+          <img src="/image/cosmetics.jpg" class="card-img-top" alt="..." />
+  
+          <h5 class="card-title">Women's fashion & Cosmetics</h5>
+        </a>
+      </div>
+      <div class="card">
+        <a href="about.html">
+          <img src="/image/shoes1.jpg" class="card-img-top" alt="..." />
+  
+          <h5 class="card-title">Shoes  <br> Sports & Formals</h5>
+        </a>
+      </div>
+    </div>
+    
+
+    <!-- footer section start  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="home.html"><i class="ri-arrow-right-line">Home</i></a>
+          <a href="product-list.html"><i class="ri-arrow-right-line">products</i></a>
+          <a href="about.html"><i class="ri-arrow-right-line">about</i></a>
+          <a href="team.html"><i class="ri-arrow-right-line">team</i></a>
+          <a href="blog.html"><i class="ri-arrow-right-line">blog</i></a>
+          <a href="contact.html"><i class="ri-arrow-right-line">contact</i></a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#"><i class="ri-arrow-right-line">my order</i></a>
+          <a href="#"><i class="ri-arrow-right-line">my wishlist</i></a>
+          <a href="#"><i class="ri-arrow-right-line">my account</i></a>
+          <a href="#"><i class="ri-arrow-right-line">my favorite</i></a>
+          <a href="#"><i class="ri-arrow-right-line">terms of user</i></a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#"><i class="ri-facebook-fill">Facebook</i></a>
+          <a href="#"><i class="ri-twitter-fill">twitter</i></a>
+          <a href="#"><i class="ri-instagram-fill">instagram</i></a>
+          <a href="#"><i class="ri-linkedin-box-fill">linkedin</i></a>
+          <a href="#"><i class="ri-pinterest-fill">pinterest</i></a>
+          <a href="#"><i class="ri-messenger-fill">messenger</i></a>
+        </div>
+        <div class="box">
+          <h3>newsletter</h3>
+          <p>subscribe for latest updates</p>
+          <form action="#">
+            <input type="email" name="" placeholder="Enter your email" id="" />
+            <button type="button" class="sum-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="credit">
+      Created by Code with Surendra Kumar || all rights reserved!
+    </section>
+
+    <!-- footer section end  -->
+
+    <!-- custom js file link  -->
+    <!-- <script src="js/script.js"></script> -->
+    <script src="/js/account.js"></script>
+    <!-- <script src="login/script.js"></script> -->
+  </body>
+</html>
