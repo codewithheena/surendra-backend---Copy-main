@@ -33,7 +33,7 @@ let displayproduct = async (allcheckcat = []) => {
                                         </div>   
                                         </div>
                                         <div class="cart-like">
-                                        <button onclick='addtolike(${id})'class="cart-like-btn" id="likebtn" > <i class="ri-heart-line"></i></button>
+                                        <button onclick='addtolike(${element.id})'class="cart-like-btn" id="likebtn" > <i class="ri-heart-line"></i></button>
 
                                         <button onclick='addtocart(${element.id})' class="cart-like-btn" id="cartbtn">  <i class="ri-shopping-cart-2-fill"></i></button>
                                        

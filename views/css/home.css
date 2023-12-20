@@ -338,7 +338,7 @@ section {
 /* shopping cart start */
 .icons #count{
     top: 50%;
-    right: 11%;
+    right: 14%;
     display: flex;
     position: absolute;
     height: 2rem;
@@ -413,6 +413,8 @@ section {
     box-shadow: 0 0 0 100vw rgba(0,0,0,0.5);
     transition: 0.5s linear;
 }
+
+
 .shopping-cart::-webkit-scrollbar{
     width: 0;
 }
@@ -489,6 +491,135 @@ section {
 
 
 /* shopping cart end */
+
+
+/* like-cart */
+.like-cart{
+   position: fixed;
+    top: 0.5%;
+    bottom: 1.5%;
+    right: -100%;
+    /* right: 0; */
+    z-index: 1000;
+    width: 40rem;
+    background: #f0e8e4;
+    padding: 1rem;
+    padding-top: 0rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 2%;
+    border-radius: 3rem;
+
+}
+.like-cart1{
+    position: relative;
+    top: 1.5%;
+    /* bottom: 1.5%; */
+    /* right: -100%; */
+    /* right: 0; */
+    z-index: 1000;
+    height: 80%;
+    width: 37rem;
+    background: #f0e8e4;
+    /* background: black; */
+    padding: 0rem;
+    padding-top: 3rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 2%;
+    border-radius: 3rem;
+
+}
+.like-cart.active{
+     right: 0;
+    -webkit-box-shadow: 0 0 0 100vw rgba(0,0,0,0.5);
+    box-shadow: 0 0 0 100vw rgba(0,0,0,0.5);
+    transition: 0.5s linear;
+}
+.like-cart1 .box{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    gap: 1.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+    align-items: center;
+    padding: 0.75rem;
+    background: #faf7f6;
+    border-radius: 1rem;
+
+}
+.like-cart1 .box .close-icon{
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #5e473e;
+    cursor: pointer;
+}
+.like-cart1 .box .close-icon:hover{
+    color: #9e7464;
+}
+
+
+.like-cart1 .box img {
+    border-radius: 0.65rem;
+    height: 8rem;
+}
+.like-cart1 .box .content h3{
+    color: #5e473e;
+    font-size: 1.7rem;
+    padding-bottom: 0.5rem;
+
+}
+.like-cart1 .box .content span{
+    font-size: 1.5rem;
+    color: #b58d7e;
+}
+.like-cart1 .box .content span.multiply {
+    margin: 0 1rem;
+}
+.like-cart .total{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #845f51;
+
+}
+.like-cart .total span{
+    color: #5e473e;
+}
+.like-cart .checkoutbtn{
+    /* position: absolute;
+    left: 0;
+    margin: 2rem; */
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* like-cart */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* login form start */
