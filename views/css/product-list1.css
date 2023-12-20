@@ -92,7 +92,19 @@
 }
 .cart-like{
     position: absolute;
-    top: 85%;
+    /* width: 60%; */
+    top: 81%;
     font-size: 3rem;
     left: 40%;
 } 
+
+.cart-like i{
+    width: 9rem;
+    height: 50px;
+}
+
+.cart-like-btn{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}

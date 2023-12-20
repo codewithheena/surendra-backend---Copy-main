@@ -1,5 +1,4 @@
 let productdiv = document.querySelector(".product-items-container");
-let addcart = [];
 let cartbtn = document.getElementById("cartbtn");
 
 let categorylist = document.querySelector(".category");
@@ -34,13 +33,9 @@ let displayproduct = async (allcheckcat = []) => {
                                         </div>   
                                         </div>
                                         <div class="cart-like">
-                                        <button onclick='addtolike(${
-                                          element.id
-                                        })'class="cart-like-btn" id="likebtn" > <i class="ri-heart-line"></i></button>
+                                        <button onclick='addtolike(${id})'class="cart-like-btn" id="likebtn" > <i class="ri-heart-line"></i></button>
 
-                                        <button onclick='addtocart(${
-                                          element.id
-                                        })' class="cart-like-btn" id="cartbtn">  <i class="ri-shopping-cart-2-fill"></i></button>
+                                        <button onclick='addtocart(${element.id})' class="cart-like-btn" id="cartbtn">  <i class="ri-shopping-cart-2-fill"></i></button>
                                        
                                         
                                         </div>
@@ -62,6 +57,8 @@ let categoryfilter = () => {
   displayproduct(checkdata);
 };
 
+
+
 function addtocart(productId) {
   fetch("allproduct-list.json")
     .then((response) => response.json())
@@ -69,18 +66,17 @@ function addtocart(productId) {
       const selectedProduct = data.find((product) => product.id === productId);
 
       // Check if the product is already in the cart
-      const existingProductIndex = addcart.findIndex(
+      const existingProductIndex = cart.findIndex(
         (item) => item.id === selectedProduct.id
       );
 
       if (existingProductIndex !== -1) {
         // Product already in the cart
         // You can update the quantity or take other actions
-        alert("Product already in the cart");
+        console.log("Product already in the cart");
       } else {
         // Product not in the cart, add it
-        // addcart = [];
-        addcart.push(selectedProduct);
+        cart.push(selectedProduct);
 
         // Update the UI to display the cart items
         renderCart();
@@ -89,48 +85,90 @@ function addtocart(productId) {
     .catch((error) => console.error("Error fetching data:", error));
 }
 
-// document.getElementById("total").innerHTML = "";
+document.getElementById("total").innerHTML = "";
 function renderCart() {
   const totalElement = document.getElementById("total");
-  // document.getElementById("count").innerHTML = cart.length;
-  let shoppingcart = document.getElementById("addingtothecart");
-  if (!shoppingcart) return;
+  document.getElementById("count").innerHTML = cart.length;
+  const cartItemElement = document.getElementById("cartItem");
+  if (!cartItemElement) return;
 
   // Clear existing content
-  shoppingcart.innerHTML = "";
+  cartItemElement.innerHTML = "";
   let total = 0;
-  // debugger
-  if (addcart.length === 0) {
+
+  if (cart.length === 0) {
     // If the cart is empty, display a message
-    shoppingcart.textContent = "Your cart is empty";
+    cartItemElement.textContent = "Your cart is empty";
   } else {
     // Render each item in the cart
-    addcart.forEach((item, index) => {
-      console.log(item);
-      // let shoppingcart = document.getElementById('addingtothecart');
-      let shoppingcartitem = document.createElement("div");
-      shoppingcartitem.classList.add("box");
-      shoppingcartitem.innerHTML += `
-          <i class="ri-close-line close-icon"></i>
-          <img src=${item.image}>
-            <div class="content">
-              <h3>${item.title}</h3>
-              <span class="quantity">1</span>
-              <span class="multiply">x</span>
-              <span class="price">${item.price}rs</span>
-              <i class="fa-solid fa-trash" onclick="removeFromCart(${index})"></i>
-            </div>`;
-      console.log(item.image);
-      shoppingcart.appendChild(shoppingcartitem);
+    cart.forEach((item, index) => {
+      const cartItemDiv = document.createElement("div");
+      cartItemDiv.classList.add("cart-item");
+      cartItemDiv.innerHTML = `
+                <div class='row-img'>
+                    <img src=${item.image} alt="" class='rowimg'>
+                </div>
+                <p>${item.title}</p>
+                <h2>${item.price}</h2>
+                <i class="fa-solid fa-trash" onclick="removeFromCart(${index})"></i>
+                `;
+      cartItemElement.appendChild(cartItemDiv);
       total += item.price;
     });
   }
   totalElement.textContent = `${total}.00 rs`;
 }
 function removeFromCart(index) {
-  addcart.splice(index, 1);
+  cart.splice(index, 1);
   renderCart();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 displayproduct();
 

@@ -2,10 +2,11 @@ const categories = [];
 let cart = [];
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/api/products')
+    fetch("allproduct-list.json")
         .then(response => response.json())
         .then(data => {
             renderProducts(data);
+            console.log(data);
         })
         .catch(error => console.error('Error fetching data:', error));
 });
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function renderProducts(products) {
     const rootElement = document.getElementById('root');
     rootElement.innerHTML = products.map((item) => {
-        const { image, title, price } = item;
+        const { image, title, price, id } = item;
         return (
             `<div class='box'>
                 <div class='img-box'>
@@ -22,7 +23,7 @@ function renderProducts(products) {
                 <div class='bottom'>
                     <p>${title}</p>
                     <h2>${price}.00</h2>
-                    <button onclick='addtocart(${item.id})'>Add to cart</button>
+                    <button onclick='addtocart(${id})'>Add to cart</button>
                 </div>
             </div>`
         );
@@ -30,7 +31,7 @@ function renderProducts(products) {
 }
 
 function addtocart(productId) {
-    fetch('products.json')
+    fetch("allproduct-list.json")
         .then(response => response.json())
         .then(data => {
             const selectedProduct = data.find(product => product.id === productId);
