@@ -51,10 +51,10 @@
 .product-div{
     border: 1px solid black;
     /* background: black; */
-    width: 22%;
+    width: 22rem;
     height: 43vh;
     border-radius: 2rem;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
 
 }
@@ -107,4 +107,18 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
+}
+
+
+
+
+
+@media screen and (max-width: 420px){
+    .product-items-container{
+    width: 120%;
+}
+.product-filter{
+    width: 0;
+    padding: 0;
+}
 }
