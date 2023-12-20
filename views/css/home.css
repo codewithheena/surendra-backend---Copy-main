@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: #faf7f6;
+    
     background-color: #e1cec7;
 
 }
@@ -1230,20 +1230,70 @@ form #forgot{
 /* responsive */
 
 
-/* 
-@media only screen and (max-width: 600px) {
-    .container{
-        width: 100%;
-    }
 
-    .card-front{
-        width: 87%;
+@media screen and (max-width: 990px) {
+    html{
+        font-size: 40%;
+        overflow-x: hidden;
     }
-    .card{
-        width: 85%;
+    body{
+        
+    }
+    .home{
+    
+    margin: 6rem;
+    border-radius: 3rem;
+    
+    left: 2rem;
+    }
+    section{
+        padding: 5rem 9%;
     }
    
-} */
+} 
+
+
+@media screen and (min-width: 768px){
+
+}
+
+
+@media screen and (max-width: 420px){
+html{
+    font-size: 43%;
+}
+#search-btn{
+    display: inline-block;
+}
+.header .search-form{
+    position: absolute;
+    height: 8rem;
+    top: -101%;
+    left: 13%;
+    
+}
+.header .search-form.active{
+    top: 110%;
+}
+.footer .box-container{
+   grid-template-columns: repeat(auto-fit,minmax(16rem,2fr));
+}
+
+.list-items-card .card{
+
+    left: 6rem!important;
+}
+}
+
+
+
+
+@media screen and (min-width: 990px) {
+.list-items-card .card{
+    left: 3rem!important;
+    margin-right: 1rem;
+}
+}
 /* login form end */
 
 
