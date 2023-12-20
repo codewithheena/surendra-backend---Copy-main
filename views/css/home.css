@@ -336,6 +336,40 @@ section {
 
 
 /* shopping cart start */
+.icons #count{
+    top: 50%;
+    right: 11%;
+    display: flex;
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.2rem;
+    background-color: grey;
+    color: black;
+    font-size: 1.7rem;
+}
+.icons #likecount{
+    top: 50%;
+    right: 8%;
+    display: flex;
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.2rem;
+    background-color: grey;
+    color: black;
+    font-size: 1.7rem;
+}
+
+
+
+
 
 .shopping-cart{
    position: fixed;
@@ -365,7 +399,7 @@ section {
     width: 37rem;
     background: #f0e8e4;
     /* background: black; */
-    padding: 1rem;
+    padding: 0rem;
     padding-top: 3rem;
     overflow-y: scroll;
     overflow-x: hidden;
