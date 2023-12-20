@@ -1296,13 +1296,19 @@ html{
 
 @media screen and (min-width: 990px) {
 html{
-    font-size: 49%;
+    font-size: 60%;
+}
+body{
+    margin: 0 2rem;
 }
 .list-items-card .card{
-    left: 3rem!important;
+    /* left: 3rem!important; */
     margin-right: 1rem;
 }
-
+.list-items-card{
+    
+    margin: 0 2rem;
+}
 
 
 .product-div{
