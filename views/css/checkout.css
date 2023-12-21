@@ -1,0 +1,108 @@
+body{
+    background-color: #e1cec7 !important;
+    border: 1px solid #9c867d;
+    border-radius: 0.3rem;
+}
+
+#checkout-form{
+    color: #4d3a32;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.lead{
+    color: #5e473e;
+}
+.billing{
+    color: #4d3a32;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+
+/* Form Text */
+.form-label{
+    color: #5e473e;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+/* Placeholder */
+.form-control{
+  color: #4d3a32;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #4d3a32;
+}
+
+
+
+/* @ text */
+.input-group-text{
+   background-color: #c7bfbc;
+   border: 1px solid #4d3a32;
+   color: #5e473e;
+}
+
+/* Input */
+.form-control{
+    background-color: #f4ece9 !important;
+}
+/* Country State */
+.form-select{
+    background-color: #f4ece9 !important;
+    border: 1px solid #4d3a32;
+}
+
+.checkout-btn{
+    background-color: #ba9c91;
+    border-radius: 1rem;
+    width: 20rem !important;
+    height: 3rem;
+    margin-left: 14rem;
+}
+.checkout-btn:hover{
+    background-color: #867771;
+}
+
+/* Privacy terms support */
+.list-inline a{
+    color: #47352d;
+}
+
+
+/*-----======your cart======----- */
+.your-cart{
+    color: #47352d;
+    font-family: 'Kalnia';
+}
+.redeem{
+    border: 1px solid #4d3a32;
+}
+.my-0{
+    color: #754733;
+}
+.brief-desc{
+    color: #9c867d !important;
+}
+
+/* Default Quantity 3 */
+.rounded-pill{
+    background-color: #5e473e !important;
+}
+
+.list-group-item{
+    background-color: #f4ece9  !important;
+}
+
+
+/* Media query */
+@media screen and (max-width: 600px) {
+    .checkout-btn{
+        width: 20rem !important;
+        height: 2.8rem;
+        margin-left: 2.8rem;
+    }
+}
+@media screen and (max-width: 375px) {
+    .checkout-btn{
+        margin-left: 1.2rem;
+    }
+}

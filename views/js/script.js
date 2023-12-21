@@ -1,10 +1,12 @@
 let closer = document.querySelector('#closer');
-
+let slides = document.querySelectorAll(".home .slides-container .slide");
+let index = 0;
 closer.onclick = () => {
     closer.style.display = 'none';
     navbar.classList.remove('active'); 
     cart.classList.remove('active'); 
     login.classList.remove('active'); 
+    likelist.classList.remove('active'); 
     likelist.classList.remove('active'); 
 }
 let navbar = document.querySelector('.navbar');
@@ -36,6 +38,11 @@ document.querySelector("#like-btn").onclick = () => {
   closer.style.display = "block";
   likelist.classList.toggle("active");
 };
+let likelist1 = document.querySelector('.like-cart');
+document.querySelector("#wishlisthomefooter").onclick = () => {
+  closer.style.display = "block";
+  likelist.classList.toggle("active");
+};
 
 
 let searchForm = document.querySelector('.header .search-form');
@@ -47,8 +54,8 @@ window.onscroll = () => {
     searchForm.classList.remove('active');
 }
 
-let slides = document.querySelectorAll('.home .slides-container .slide');
-let index = 0;
+
+
 function next() {
     slides[index].classList.remove('active');
     index = (index + 1) % slides.length;

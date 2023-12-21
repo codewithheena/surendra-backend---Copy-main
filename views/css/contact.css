@@ -1,19 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  /* box-sizing: border-box; */
+ font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
 }
 
 body {
-  background-color: #faf7f6;
+ 
   background-color: #e1cec7;
   font-size: 14px;
 }
+
+html{
+  font-size:62.5%;
+  overflow-y: scroll;
+}
 .container {
   width: 80%;
-  margin: 45px;
+  margin: 6rem;
 }
 
 .container h1{
@@ -24,9 +36,9 @@ body {
 .contact-box {
   background: rgb(255, 255, 255);
   width: 80%;
-  margin-left: 7rem;
-  border-radius: 1rem;
-  padding: 1rem;
+     margin-left: 13rem;
+    border-radius: 2rem;
+    padding: 3rem;
 }
 .contact-left {
   flex-basis: 60%;

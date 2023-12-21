@@ -93,6 +93,8 @@ function addtocart(productId) {
 function renderCart() {
   const totalElement = document.getElementById("total");
   document.getElementById("count").innerHTML = addcart.length;
+  
+  
   let shoppingcart = document.getElementById("addingtothecart");
   if (!shoppingcart) return;
 
@@ -207,28 +209,3 @@ function removeFromlikeCart(index) {
   renderlikeCart();
 }
 displayproduct();
-
-// let rawproduct = async () => {
-//   let product = await fetch("https://fakestoreapi.com/products");
-//   let finalproduct = await product.json();
-//   console.log(finalproduct);
-//   productdiv.innerHTML = "";
-//   finalproduct.forEach((element) => {
-//     productdiv.innerHTML += `
-//             <div class="product-div">
-//                 <img src=${element.image} alt="">
-//                 <span>${element.title}</span>
-//                 <div class="rating-price">
-//                     <div class="rating">
-//                         <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-//                     </div>
-
-//                     <div class="product-div-price">
-//                         ${element.price + " Rs"}
-//                     </div>
-//                 </div>
-//               </div>`;
-//   });
-// };
-
-// rawproduct();

@@ -257,7 +257,8 @@ section {
     cursor: pointer;
     color: #5e473e;
   }
-  .header .icons div:hover {
+  
+  .header .icons div:hover {    
     color: #9e7464;
   }
 
