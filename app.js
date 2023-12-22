@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
-const bcrypt = require("bcrypt");
+ const bcrypt = require("bcrypt");
 const path = require("path");
 
- const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
-    app.use(express.json());
-    app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // const product = require("./models/product");
 // const collection = require("./views/config");
@@ -18,14 +18,11 @@ mongoose.connect("mongodb://localhost:27017/e-commerce").then(() => {
   console.log("Database Connection is ready...");
 });
 
- 
-
-
 // Set EJS as the view engine
 app.set("view engine", "ejs");
 
 // Set the views directory
-app.set("views",path.join(__dirname, "/views"));
+app.set("views", path.join(__dirname, "/views"));
 
 // Define a route to render the HTML file
 
@@ -47,7 +44,15 @@ app.get("/products", (req, res) => {
 app.get("/contact", (req, res) => {
   res.render("contact"); // Renders views/index.ejs
 });
-
+app.get("/myaccount", (req, res) => {
+  res.render("myaccount"); // Renders views/index.ejs
+});
+app.get("/myaccount", (req, res) => {
+  res.render("myaccount"); // Renders views/index.ejs
+});
+app.post("/home", (req, res) => {
+  res.render("home"); // Renders views/index.ejs
+});
 
 
 app.post("/signup", async (req, res) => {
@@ -80,9 +85,7 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-
-
-app.post("/login", async (req, res) => {
+app.post("/account", async (req, res) => {
   try {
     const check = await collection.findOne({ email: req.body.myloginemail });
     if (!check) {
@@ -96,16 +99,31 @@ app.post("/login", async (req, res) => {
 
     // const isconfirmpasswordmatch = await bcrypt.compare(req.body.myconfirmpassword, check.confirmpassword);
     if (ispasswordmatch) {
-      res.render("account")
-      // res.send("welcome");
+      // history.pushState(null, null, location.href);
+      // res.render("account");
+       res.render("account");
+       
+     
     } else {
       res.send("wrong email and password");
     }
   } catch (error) {
-    res.send("wrond email and password");
+    res.send("error-wrong email and password");
   }
 });
 
+// function logged(isLoggedIn) {
+
+//     // Add an entry to the browser's session history
+//     history.pushState(null, null, location.href);
+
+//     // Listen for the popstate event (back/forward button clicked)
+//     window.addEventListener("popstate", function () {
+//       // Restore the previous URL
+//       history.pushState(null, null, location.href);
+//     });
+
+// }
 
 const LoginSchema = new mongoose.Schema({
   name: {
@@ -129,32 +147,7 @@ const LoginSchema = new mongoose.Schema({
 const collection = mongoose.model("users", LoginSchema);
 module.exports = collection;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
-
-
-
