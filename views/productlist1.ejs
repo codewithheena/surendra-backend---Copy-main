@@ -16,6 +16,7 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/product-list1.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 
 </head>
 
@@ -32,7 +33,7 @@
                     <div id="menu-btn" class="ri-menu-line"></div>
                     <div id="search-btn" class="ri-search-line"></div>
                     
-                    <div id="cart-btn" class="ri-shopping-cart-line"><p id="count">0</p></div>
+                    <div id="cart-btn" class="ri-shopping-cart-line"><p  id="count">0</p></div>
                     <div id="login-btn" class="ri-user-line"></div>
                     <div class="ri-heart-line" id="like-btn"><p id="likecount">0</p></div>
 
@@ -47,7 +48,7 @@
 
     <!-- navbar start  -->
             <div class="navbar">
-        <a href="home.html">Home</a><a href="shop.html">shop</a><a href="about.html">about</a><a href="team.html">team</a><a href="product-list.html">blog</a><a href="contact.html">contact</a>
+        <a href="/home">Home</a><a href="/products">products</a><a href="/about">about us</a><a href="/contact">contact us</a>
     </div>
     <!-- navbar end  -->
 
@@ -59,6 +60,7 @@
 
 
         <div class="shopping-cart1" id="addingtothecart">
+         <p style="font-size: 2rem;">Your cart is empty</p>
 
         </div>
        
@@ -77,6 +79,7 @@
 
 
         <div class="like-cart1" id="addingtothelikecart">
+          <p style="font-size: 2rem;">Your cart is empty</p>
 
         </div>
        
@@ -92,80 +95,94 @@
 
 
     <!-- login form start  -->
-     <div class="login-form">
-
-        <div class="container">
-          <div class="card">
-            <div class="inner-box" id="card">
-              <div class="card-front">
-                <h1>SIGN UP</h1>
-                <form action="">
-                    <img  id="name" src="/name.png" alt="">
-                    <input
-                    type="text"
-                    class="input-box"
-                    placeholder="Your Name"
-                    required
-                  />
-                    <img id="email" src="/mail-outline.svg" alt="">
-                  <input
-                    type="email"
-                    class="input-box"
-                    placeholder="Email"
-                    required
-                  />
-                  <img id="pass1" src="/lock-closed-outline.svg" alt="">
-                  <input
-                    type="password"
-                    class="input-box"
-                    placeholder="Password"
-                    required
-                  />
-                  <img id="pass2" src="/lock-closed-outline.svg" alt="">
-                  <input
-                    type="password"
-                    class="input-box"
-                    placeholder="Confirm Password"
-                    required
-                  />
-                  <label id="rem">
-                    <input type="checkbox" /><span>Remember Me</span>
-                  </label>
-                  <a href="#" id="forgot">Forgot Password</a>
-                  <button type="submit" class="sumbit-btn">Sumbit</button>
-                  <span id="accountregister">Don't have a account </span>
-                  <button type="button" class="btn" onclick="openregister()">Register Now</button>
-                </form>
-              </div>
-              <div class="card-back">
-                <h1>LOGIN</h1>
-                <form action="">
-                    <img id="email" src="/mail-outline.svg" alt="">
-                  <input
-                    type="email"
-                    class="input-box"
-                    placeholder="Email"
-                    required
-                  />
-                  <img id="pass1" src="/lock-closed-outline.svg" alt="">
-                  <input
-                    type="password"
-                    class="input-box"
-                    placeholder="Password"
-                    required
-                  />
-                  <label id="remback">
-                    <input type="checkbox" /><span>Remember Me</span>
-                  </label>
-                  <a href="#" id="forgot">Forgot Password</a>
-                  <button type="submit" class="sumbit-btn">Sumbit</button>
-                  <span id="accountregister">Already have a account </span>
-                  <button type="button" onclick="openlogin()" class="btn">Sign In</button>
-                </form>
-              </div>
+    <div class="login-form">
+      <div class="container">
+        <div class="card">
+          <div class="inner-box" id="card">
+            <div class="card-front">
+              <h1>SIGN UP</h1>
+              <form action="/signup" method="post" >
+                <img id="name" src="/name.png" alt="" />
+                <input
+                  type="text"
+                  class="input-box"
+                  placeholder="Your Name"
+                  name="myname"
+                  id="idname"
+                  required
+                />
+                <img id="email" src="/mail-outline.svg" alt="" />
+                <input
+                  type="email"
+                  class="input-box"
+                  placeholder="Email"
+                  name="myemail"
+                  id="idEmail"
+                  onkeyup="valiemail()"
+                  required
+                />
+                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Password"
+                  name="mypassword"
+                  id="idpassword"
+                  required
+                />
+                <img id="pass2" src="/lock-closed-outline.svg" alt="" />
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Confirm Password"
+                  name="myconfirmpassword"
+                  id="idconfirmpassword"
+                  required
+                />
+                <label id="rem">
+                  <input type="checkbox" /><span>Remember Me</span>
+                </label>
+                <a href="#" id="forgot">Forgot Password</a>
+                <button type="submit" class="sumbit-btn" onclick=" return validata()">Sumbit</button>
+                <span id="accountregister">Don't have a account </span>
+                <button type="button" class="btn" onclick="openlogin()" >
+                  Log In
+                </button>
+              </form>
+            </div>
+            <div class="card-back">
+              <h1>LOGIN</h1>
+              <form action="/login"   method="post">
+                <img id="email" src="/mail-outline.svg" alt="" />
+                <input
+                  type="email"
+                  class="input-box"
+                  placeholder="Email"
+                  name="myloginemail"
+                  required
+                />
+                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Password"
+                  name="myloginpass"
+                  required
+                />
+                <label id="remback">
+                  <input type="checkbox" /><span>Remember Me</span>
+                </label>
+                <a href="#" id="forgot">Forgot Password</a>
+                <button type="submit" class="sumbit-btn">Sumbit</button>
+                <span id="accountregister">Already have a account </span>
+                <button type="button" onclick="openregister()" class="btn">
+                  Register Now
+                </button>
+              </form>
             </div>
           </div>
         </div>
+      </div>
     </div>
     <!-- login form end  -->
 
@@ -234,19 +251,19 @@
         <div class="box">
           <h3>quick links</h3>
           <a href="/home"><i class="ri-arrow-right-line">Home</i></a>
-          <a href="shope.html"><i class="ri-arrow-right-line">shop</i></a>
-          <a href="about.html"><i class="ri-arrow-right-line">about</i></a>
-          <a href="team.html"><i class="ri-arrow-right-line">team</i></a>
-          <a href="blog.html"><i class="ri-arrow-right-line">blog</i></a>
+          <a href="/products"><i class="ri-arrow-right-line">products</i></a>
+          <a href="/about"><i class="ri-arrow-right-line">about</i></a>
+       
+          
           <a href="/contact"><i class="ri-arrow-right-line">contact</i></a>
         </div>
         <div class="box">
           <h3>quick links</h3>
-          <a href="#"><i class="ri-arrow-right-line">my order</i></a>
-          <a href="#" id="wishlisthomefooter"><i class="ri-arrow-right-line">my wishlist</i></a>
-          <a href="#"><i class="ri-arrow-right-line">my account</i></a>
-          <a href="#"><i class="ri-arrow-right-line">my favorite</i></a>
-          <a href="#"><i class="ri-arrow-right-line">terms of user</i></a>
+          <a href="/products"><i class="ri-arrow-right-line">my order</i></a>
+          <a href="/products" id="wishlisthomefooter"><i class="ri-arrow-right-line">my wishlist</i></a>
+          <a href=""><i class="ri-arrow-right-line">my account</i></a>
+          
+          <a href=""><i class="ri-arrow-right-line">terms of user</i></a>
         </div>
         <div class="box">
           <h3>quick links</h3>
@@ -276,7 +293,7 @@
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
-    <script src="login/script.js"></script>
+    <script src="js/loginscript.js"></script>
     <script src="/js/product-list.js"></script>
 
 

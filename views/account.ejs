@@ -26,7 +26,7 @@
   <body>
     <!-- header section starts  -->
     <header class="header">
-      <a href="#home.html" class="logo"
+      <a href="/home" class="logo"
         ><i class="ri-menu-line"></i>VOUCHER CARD</a
       >
       <form action="#" class="search-form">
@@ -50,142 +50,54 @@
     <!-- navbar start  -->
 
     <div class="navbar">
-      <a href="home.html">Home</a><a href="shop.html">shop</a
-      ><a href="about.html">about</a><a href="team.html">team</a
-      ><a href="product-list.html">products</a><a href="contact.html">contact</a>
+      <a href="home.html">Home</a><a href="/about">about us</a><a href="/products">products</a><a href="/contact">contact us</a>
     </div>
 
     <!-- navbar end  -->
 
     <!-- shopping cart start  -->
 
-    <div class="shopping-cart">
-      
-      <div class="box">
-        <i class="ri-close-line close-icon"></i>
-        <img src="image/cart-img-1.jpg" alt="" />
-        <div class="content">
-          <h3>modern furniture</h3>
-          <span class="quantity">1</span>
-          <span class="multiply">x</span>
-          <span class="price">140.00rs</span>
+    <div class="shopping-cart"  >
+
+
+
+        <div class="shopping-cart1" id="addingtothecart">
+          <p style="font-size: 2rem;">Your cart is empty</p>
         </div>
-      </div>
-      <div class="box">
-        <i class="ri-close-line close-icon"></i>
-        <img src="image/cart-img-2.jpg" alt="" />
-        <div class="content">
-          <h3>modern furniture</h3>
-          <span class="quantity">1</span>
-          <span class="multiply">x</span>
-          <span class="price">140.00rs</span>
+       
+       
+        
+        
+        
+        
+        <h3 class="total" id="total">Total : <span> Rs</span> </h3>
+        <a href="#" class="checkoutbtn">checkout</a> 
+    </div>
+
+
+
+
+
+ <div class="like-cart"  >
+
+
+
+        <div class="like-cart1" id="addingtothelikecart">
+          <p style="font-size: 2rem;">Your cart is empty</p>
         </div>
-      </div>
-      <div class="box">
-        <i class="ri-close-line close-icon"></i>
-        <img src="image/cart-img-3.jpg" alt="" />
-        <div class="content">
-          <h3>modern furniture</h3>
-          <span class="quantity">1</span>
-          <span class="multiply">x</span>
-          <span class="price">140.00rs</span>
-        </div>
-      </div>
-      <div class="box">
-        <i class="ri-close-line close-icon"></i>
-        <img src="image/cart-img-4.jpg" alt="" />
-        <div class="content">
-          <h3>modern furniture</h3>
-          <span class="quantity">1</span>
-          <span class="multiply">x</span>
-          <span class="price">140.00rs</span>
-        </div>
-      </div>
-      <h3 class="total">Total : <span>560 Rs</span></h3>
-      <a href="#" class="checkoutbtn">checkout</a>
+       
+       
+        
+        
+        
+        
+        <h3 class="total" id="total">Total : <span> Rs</span> </h3>
+        <a href="#" class="checkoutbtn">checkout</a> 
     </div>
 
     <!-- shopping cart end  -->
 
-    <!-- login form start  -->
-    <!-- <div class="login-form">
-      <div class="container">
-        <div class="card">
-          <div class="inner-box" id="card">
-            <div class="card-front">
-              <h1>SIGN UP</h1>
-              <form action="">
-                <img id="name" src="/name.png" alt="" />
-                <input
-                  type="text"
-                  class="input-box"
-                  placeholder="Your Name"
-                  required
-                />
-                <img id="email" src="/mail-outline.svg" alt="" />
-                <input
-                  type="email"
-                  class="input-box"
-                  placeholder="Email"
-                  required
-                />
-                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
-                <input
-                  type="password"
-                  class="input-box"
-                  placeholder="Password"
-                  required
-                />
-                <img id="pass2" src="/lock-closed-outline.svg" alt="" />
-                <input
-                  type="password"
-                  class="input-box"
-                  placeholder="Confirm Password"
-                  required
-                />
-                <label id="rem">
-                  <input type="checkbox" /><span>Remember Me</span>
-                </label>
-                <a href="#" id="forgot">Forgot Password</a>
-                <button type="submit" class="sumbit-btn">Sumbit</button>
-                <span id="accountregister">Don't have a account </span>
-                <button type="button" class="btn" onclick="openregister()">
-                  Register Now
-                </button>
-              </form>
-            </div>
-            <div class="card-back">
-              <h1>LOGIN</h1>
-              <form action="">
-                <img id="email" src="/mail-outline.svg" alt="" />
-                <input
-                  type="email"
-                  class="input-box"
-                  placeholder="Email"
-                  required
-                />
-                <img id="pass1" src="/lock-closed-outline.svg" alt="" />
-                <input
-                  type="password"
-                  class="input-box"
-                  placeholder="Password"
-                  required
-                />
-                <label id="remback">
-                  <input type="checkbox" /><span>Remember Me</span>
-                </label>
-                <a href="#" id="forgot">Forgot Password</a>
-                <button type="submit" class="sumbit-btn">Sumbit</button>
-                <span id="accountregister">Already have a account </span>
-                <button type="button" onclick="openlogin()" class="btn">
-                  Sign In
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+   
 
     <!-- login form end  -->
 
@@ -194,9 +106,14 @@
 
 <!-- Account page -->
 <div class="Account">
-    <a href="account.html">My Account</a>
-    <a href="orders.html">My Orders</a>
-    <a href="wishlist.html">My Wishlist</a>
+    <a href="/myaccount">My Account</a>
+    <a href="/home">My Orders</a>
+    <a href="/products">My Wishlist</a>
+
+     <form action="/home" method="post">
+        <button type="submit">Sign Out</button>
+    </form>
+
  </div>
 
 <!-- Account page ends -->
@@ -335,14 +252,14 @@
           <a href="/products"><i class="ri-arrow-right-line">Products</i></a>
           <a href="/about"><i class="ri-arrow-right-line">about</i></a>
           <a href="/contact"><i class="ri-arrow-right-line">contact</i></a>
-          <a href="team"><i class="ri-arrow-right-line">team</i></a>
+       
         </div>
         <div class="box">
           <h3>quick links</h3>
-          <a href="#"><i class="ri-arrow-right-line">my order</i></a>
-          <a href="/products" id="wishlisthomefooter" ><i class="ri-arrow-right-line">my wishlist</i></a>
-          <a href="#"><i class="ri-arrow-right-line">my account</i></a>
-          <a href="#"><i class="ri-arrow-right-line">my favorite</i></a>
+          <a href="/home"><i class="ri-arrow-right-line">my order</i></a>
+          <a href="/account/products" id="wishlisthomefooter" ><i class="ri-arrow-right-line">my wishlist</i></a>
+          <a href="/myaccount"><i class="ri-arrow-right-line">my account</i></a>
+        
           <a href="#"><i class="ri-arrow-right-line">terms of user</i></a>
         </div>
         <div class="box">
@@ -371,7 +288,7 @@
     <!-- footer section end  -->
 
     <!-- custom js file link  -->
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     <script src="./js/account.js"></script>
     <script src="js/loginscript.js"></script>
   </body>

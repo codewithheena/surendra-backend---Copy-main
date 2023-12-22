@@ -5,6 +5,8 @@ closer.onclick = () => {
     navbar.classList.remove('active'); 
     cart.classList.remove('active'); 
     account.classList.remove('active'); 
+    likelist.classList.remove("active");
+    likelist1.classList.remove("active");
 }
 let navbar = document.querySelector('.navbar');
 document.querySelector('#menu-btn').onclick = () => {
@@ -18,6 +20,17 @@ let cart = document.querySelector('.shopping-cart');
 document.querySelector('#cart-btn').onclick = () => {
     closer.style.display = "block";
     cart.classList.toggle("active");
+};
+
+let likelist = document.querySelector(".like-cart");
+document.querySelector("#like-btn").onclick = () => {
+  closer.style.display = "block";
+  likelist.classList.toggle("active");
+};
+let likelist1 = document.querySelector(".like-cart");
+document.querySelector("#wishlisthomefooter").onclick = () => {
+  closer.style.display = "block";
+  likelist.classList.toggle("active");
 };
 
 
@@ -52,3 +65,9 @@ function prev() {
     index = (index - 1 + slides.length) % slides.length;
     slides[index].classList.add('active');
 }
+
+
+ document.getElementById("signoutBtn").addEventListener("click", function () {
+   // Redirect to the home page or any other page after signout
+   window.location.href = "/home";
+ });

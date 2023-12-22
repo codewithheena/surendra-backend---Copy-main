@@ -7,7 +7,7 @@ closer.onclick = () => {
     cart.classList.remove('active'); 
     login.classList.remove('active'); 
     likelist.classList.remove('active'); 
-    likelist.classList.remove('active'); 
+    likelist1.classList.remove('active'); 
 }
 let navbar = document.querySelector('.navbar');
 

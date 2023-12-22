@@ -105,6 +105,7 @@ function renderCart() {
   if (addcart.length === 0) {
     // If the cart is empty, display a message
     shoppingcart.textContent = "Your cart is empty";
+    shoppingcart.style.fontSize = "3rem";
   } else {
     // Render each item in the cart
     addcart.forEach((item, index) => {
@@ -178,7 +179,7 @@ function renderlikeCart() {
   if (likecart.length === 0) {
     // If the cart is empty, display a message
     likingcart.textContent = "Your cart is empty";
-    likingcart.style.fontSize = "2rem";
+    likingcart.style.fontSize = "4rem";
 
   } else {
     // Render each item in the cart
