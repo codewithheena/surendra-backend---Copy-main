@@ -11,7 +11,7 @@ function openlogin() {
 }
 
 //form validation
-debugger
+// debugger
 function valiemail() {
   
   let idemail = document.getElementById("idEmail");
@@ -22,19 +22,23 @@ function valiemail() {
     return false;
   } else {
     idemail.style.borderBottom = "2px solid black";
-    // return true;
+    return true;
   }
 }
 
 function validata() {
   // let idname = document.getElementById("idname").value;
-
+  if (!valiemail()) {
+    // Email validation failed, show a warning or prevent form submission
+    // alert("Email syntax is incorrect");
+    return false;
+  }
   
-
   if (idpassword.value != idconfirmpassword.value) {
     alert("Password is not matched");
     return false;
   } else {
     return true;
   }
+  
 }

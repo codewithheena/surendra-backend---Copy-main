@@ -38,6 +38,7 @@ app.get("/home", (req, res) => {
 app.get("/account", (req, res) => {
   res.render("account"); // Renders views/index.ejs
 });
+
 app.get("/products", (req, res) => {
   res.render("productlist1"); // Renders views/index.ejs
 });
