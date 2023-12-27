@@ -51,9 +51,19 @@ app.get("/myaccount", (req, res) => {
 app.get("/myaccount", (req, res) => {
   res.render("myaccount"); // Renders views/index.ejs
 });
+app.get("/productpage", (req, res) => {
+  res.render("productpage"); // Renders views/index.ejs
+});
+app.get("/about", (req, res) => {
+  res.render("about"); // Renders views/index.ejs
+});
+app.get("/checkout", (req, res) => {
+  res.render("checkout"); // Renders views/index.ejs
+});
 app.post("/home", (req, res) => {
   res.render("home"); // Renders views/index.ejs
 });
+
 
 
 app.post("/signup", async (req, res) => {

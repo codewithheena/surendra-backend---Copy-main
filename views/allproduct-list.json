@@ -1,11 +1,15 @@
 [
   {
     "id": 1,
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "title": "new balance Men EVOZ Quartz Grey Running Shoes",
     "price": 109.95,
     "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
     "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61zT0sOYcSL._SY695_.jpg",
+    "smallimage1":"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71AGVeFg2XL._SY695_.jpg",
+    "smallimage2":"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/613ndYN8jxL._SY695_.jpg",
+    "smallimage3":"https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71+GCuGGvfL._SY695_.jpg",
+    
     "rating": { "rate": 3.9, "count": 120 }
   },
   {

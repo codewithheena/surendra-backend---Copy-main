@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-page</title>
+    
+    
+    <!-- remix icon cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/product.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+    <header class="header">
+      <a href="#home.html" class="logo"><i class="ri-menu-line"></i>VOUCHER CARD</a>
+      <form action="#" class="search-form">
+          <input type="search" placeholder="search anything" id="search-box">
+          <label for="search-box" class="ri-search-line"></label>
+      </form>
+
+      <div class="icons">
+        <div id="menu-btn" class="ri-menu-line"></div>
+        <div id="search-btn" class="ri-search-line"></div>
+        <!-- <div id="cart-btn" class="ri-shopping-cart-line">0</div>  -->
+        <div id="cart-btn" class="ri-shopping-cart-line"><p id="count">0</p></div> 
+        <!-- <div class="ri-heart-line" id="like-btn"><p id="likecount">0</p></div> -->
+        <div id="login-btn" class="ri-user-line"></div>
+      </div>
+
+  </header>
+    <!-- header section ends  -->
+
+
+    <!-- closer btn  -->
+    <div id="closer" class="ri-close-line"></div>
+
+    <!-- navbar start  -->
+    <div class="navbar">
+      <a href="home.html">Home</a><a href="shop.html">shop</a><a href="about.html">about</a><a href="team.html">team</a><a href="blog.html">blog</a><a href="contact.html">contact</a>
+  </div>
+    <!-- navbar end  -->
+
+ <!-- shopping cart start  -->
+    
+ <div class="shopping-cart"  >
+
+    <div class="shopping-cart1" id="addingtotheproductcart">
+     <p style="font-size: 2rem;">Your cart is empty</p>
+
+    </div>
+    
+    <h3 class="total" id="total">Total : <span> Rs</span> </h3>
+    <a href="#" class="checkoutbtn">checkout</a> 
+</div>
+
+
+    <!-- login form start  -->
+    <div class="login-form">
+
+      <div class="container">
+        <div class="card">
+          <div class="inner-box" id="card">
+            <div class="card-front">
+              <h1>SIGN UP</h1>
+              <form action="">
+                  <img  id="name" src="/name.png" alt="">
+                  <input
+                  type="text"
+                  class="input-box"
+                  placeholder="Your Name"
+                  required
+                />
+                  <img id="email" src="/mail-outline.svg" alt="">
+                <input
+                  type="email"
+                  class="input-box"
+                  placeholder="Email"
+                  required
+                />
+                <img id="pass1" src="/lock-closed-outline.svg" alt="">
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Password"
+                  required
+                />
+                <img id="pass2" src="/lock-closed-outline.svg" alt="">
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <label id="rem">
+                  <input type="checkbox" /><span>Remember Me</span>
+                </label>
+                <a href="#" id="forgot">Forgot Password</a>
+                <button type="submit" class="sumbit-btn">Sumbit</button>
+                <span id="accountregister">Don't have a account </span>
+                <button type="button" class="btn" onclick="openregister()">Register Now</button>
+              </form>
+            </div>
+            <div class="card-back">
+              <h1>LOGIN</h1>
+              <form action="">
+                  <img id="email" src="/mail-outline.svg" alt="">
+                <input
+                  type="email"
+                  class="input-box"
+                  placeholder="Email"
+                  required
+                />
+                <img id="pass1" src="/lock-closed-outline.svg" alt="">
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Password"
+                  required
+                />
+                <label id="remback">
+                  <input type="checkbox" /><span>Remember Me</span>
+                </label>
+                <a href="#" id="forgot">Forgot Password</a>
+                <button type="submit" class="sumbit-btn">Sumbit</button>
+                <span id="accountregister">Already have a account </span>
+                <button type="button" onclick="openlogin()" class="btn">Sign In</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    <!-- login form end  -->
+
+
+
+    
+    <!-- product section start -->
+    <div class="product-page" id="productpage">
+      <div class="left-div">
+        <div class="mainimage">
+          <img src="image/shoes2.jpg" alt="" id="ProductImg" class="img-fluid" />
+        </div>
+        <div class="small-image">
+          <div class="sub-image">
+            <img  id="si1" src="image/small-shoe1.jpg" alt="" class="small-img img-fluid">
+          </div>
+          <div class="sub-image">
+            <img id="si2" src="image/small-shoe2.jpg" alt="" class="small-img img-fluid">
+          </div>
+          <div class="sub-image">
+            <img id="si3" alt="" class="small-img img-fluid">
+          </div>
+          <div class="sub-image">
+            <img id="si4" src="image/shoes2.jpg" alt="" class="small-img img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="right-div">
+      <div class="pro-content">
+        <p id="shoe-heading">Shoes</p>
+        <h2 id="producttitle">Green Sport Shoes</h2>
+        <h4 id="productprice">1200Rs</h4>
+        <select>
+          <option>Select Size</option>
+          <option>XL</option>
+          <option>XXL</option>
+          <option>Large</option>
+          <option>Medium</option>
+          <option>Small</option>
+        </select>
+       
+        <input type="number" value="0"  min="0">
+        <button  id="productaddtocartbtn" class="shop-btn Addcart"
+        type="button" 
+        style="width: 26%;  height: 4rem; margin-top: 3rem; "
+      >
+        Add to Cart
+      </button>
+        
+        <h3 id="details-heading">Product Details <i class=" fa fa-indent"></i></h3>
+        <br>
+        <p id="productdetails" style="color: rgb(140, 69, 69);">
+          Give your summer wardrobe a style upgrade with the HRX Men's active
+          shoes.
+          <span > Team it with a pair of shorts for your morning workout or an
+            evening out zith the guys.</span>
+            <br>
+            <p style="color: rgb(140, 69, 69);"> Closure : TypeLace-Up</p>
+            <p style="color: rgb(140, 69, 69);">Material : TypeMesh</p>
+        </p>
+         
+        </div>
+      </div>
+    </div>
+
+
+    <!-- heading section end -->
+
+
+    <!-- contact section start -->
+
+    <!-- contact section end -->
+
+
+
+
+
+    <!-- footer section start  -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="/home"><i class="ri-arrow-right-line">Home</i></a>
+          <a href="shope.html"><i class="ri-arrow-right-line">shop</i></a>
+          <a href="about.html"><i class="ri-arrow-right-line">about</i></a>
+          <a href="team.html"><i class="ri-arrow-right-line">team</i></a>
+          <a href="blog.html"><i class="ri-arrow-right-line">blog</i></a>
+          <a href="contact.html"><i class="ri-arrow-right-line">contact</i></a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#"><i class="ri-arrow-right-line">my order</i></a>
+          <a href="#"><i class="ri-arrow-right-line">my wishlist</i></a>
+          <a href="#"><i class="ri-arrow-right-line">my account</i></a>
+          <a href="#"><i class="ri-arrow-right-line">my favorite</i></a>
+          <a href="#"><i class="ri-arrow-right-line">terms of user</i></a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#"><i class="ri-facebook-fill">Facebook</i></a>
+          <a href="#"><i class="ri-twitter-fill">twitter</i></a>
+          <a href="#"><i class="ri-instagram-fill">instagram</i></a>
+          <a href="#"><i class="ri-linkedin-box-fill">linkedin</i></a>
+          <a href="#"><i class="ri-pinterest-fill">pinterest</i></a>
+          <a href="#"><i class="ri-messenger-fill">messenger</i></a>
+         
+        <div class="box">
+          <h3>newsletter</h3>
+          <p>subscribe for latest updates</p>
+          <form action="#">
+            <input type="email" name="" placeholder="Enter your email" id="">
+            <button type="button" class="sum-btn">Subscribe</button>
+          </form>
+        </div>  
+        </div>
+      </div>
+    </section>
+    <section class="credit">
+      Created by Code with || all rights reserved!
+    </section>
+    <!-- footer section end  -->
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/loginscript.js"></script>
+    <!-- <script src="js/product-list.js"></script> -->
+    <script src="js/product-page.js"></script>
+
+</body>
+
+</html>

@@ -21,11 +21,13 @@ let displayproduct = async (allcheckcat = []) => {
     }
     if (allcheckcat.includes(element.category)) {
       productdiv.innerHTML += ` <div class="product-div">
-                                  <img src=${element.image} alt="">
+                                   <a href="/productpage?id=${
+                                     element.id
+                                   }"><img src=${element.image} alt=""></a>
                                   <span>${element.title}</span>
                                     <div class="rating-price">
                                         <div class="rating">
-                                          <i class="ri-star-fill"></i><i   class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                          
                                         </div>
                                        
                   
@@ -83,11 +85,66 @@ function addtocart(productId) {
         addcart.push(selectedProduct);
 
         // Update the UI to display the cart items
+        setCookie('addcart', addcart, 7);
         renderCart();
       }
     })
     .catch((error) => console.error("Error fetching data:", error));
 }
+
+// function updateCartCookie() {
+//   setCookie('addcart', addcart, 7); // Save cart in a cookie with 7 days expiration
+// }
+
+function getCookie(name) {
+  const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+  for (const cookie of cookies) {
+    if (cookie.startsWith(name)) {
+      return JSON.parse(cookie.split('=')[1]);
+    }
+  }
+  return null;
+}
+
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
+  document.cookie = `${name}=${JSON.stringify(value)};expires=${expires};path=/`;
+}
+
+// Retrieve cart data from the cookie when loading the page
+window.addEventListener('load', () => {
+  const cartData = getCookie('addcart');
+
+  // Check if cartData exists and update the addcart variable accordingly
+  if (cartData) {
+    addcart = cartData;
+    renderCart(); // Update the cart UI when the page loads
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // document.getElementById("total").innerHTML = "";
 function renderCart() {
@@ -133,6 +190,7 @@ function renderCart() {
 function removeFromCart(index) {
   addcart.splice(index, 1);
   renderCart();
+  setCookie('addcart', addcart, 7);
 }
 
 let likecart = [];
