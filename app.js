@@ -14,9 +14,9 @@ app.use(express.urlencoded({ extended: false }));
 const mongoose = require("mongoose");
 app.use(express.static("views"));
 const port = 3000; // Set the desired port number
-mongoose.connect("mongodb://localhost:27017/e-commerce").then(() => {
-  console.log("Database Connection is ready...");
-});
+// mongoose.connect("mongodb://localhost:27017/e-commerce").then(() => {
+//   console.log("Database Connection is ready...");
+// });
 
 // Set EJS as the view engine
 app.set("view engine", "ejs");

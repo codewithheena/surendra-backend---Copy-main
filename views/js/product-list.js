@@ -10,6 +10,18 @@ let displayproduct = async (allcheckcat = []) => {
   // let product = await fetch("https://fakestoreapi.com/products");
   let product = await fetch("allproduct-list.json");
   let finalproduct = await product.json();
+  const sortSelect = document.getElementById("sort-select");
+  const selectedSort = sortSelect.value;
+  console.log(selectedSort.value);
+
+  // Sort the products based on the selected criteria
+  if (selectedSort === "Default") {
+    
+  } else if (selectedSort === "price-low-to-high") {
+    finalproduct.sort((a, b) => a.price - b.price);
+  } else if (selectedSort === "price-high-to-low") {
+    finalproduct.sort((a, b) => b.price - a.price);
+  }
   finalproduct.forEach((element) => {
     if (!allCat.includes(element.category)) {
       categorylist.innerHTML += `<label for=""><input type="checkbox" onclick='categoryfilter()' value="${element.category}" id="checkicon">${element.category}</label>`;
@@ -51,6 +63,38 @@ let displayproduct = async (allcheckcat = []) => {
     }
   });
 };
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sortSelect = document.getElementById("sort-select");
+
+  sortSelect.addEventListener("change", () => {
+    displayproduct();
+  });
+
+  // ... existing code ...
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let categoryfilter = () => {
   let checkinput = document.querySelectorAll("#checkicon");

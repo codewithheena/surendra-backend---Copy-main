@@ -22,7 +22,7 @@
       crossorigin="anonymous"
     />
     <!-- Css file link -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/checkout.css" />
     <!-- bootsrap js file -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
@@ -151,7 +151,7 @@
                 class="d-flex justify-content-between align-items-center mb-3"
               >
                 <span class="your-cart">Your cart</span>
-                <span class="badge bg-primary rounded-pill">3</span>
+               
               </h4>
               <ul id="Aayush" class="list-group mb-3">
                 
@@ -258,7 +258,7 @@
                       class="form-control"
                       id="address"
                       placeholder="1234 Main St"
-                      required=""
+                      required
                     />
                     <div class="invalid-feedback">
                       Please enter your shipping address.
@@ -307,7 +307,7 @@
                       class="form-control"
                       id="zip"
                       placeholder=""
-                      required=""
+                      required
                     />
                     <div class="invalid-feedback">Zip code required.</div>
                   </div>
@@ -347,12 +347,12 @@
                   <div class="form-check">
                     <input
                       id="credit"
-                      style="background-color: #5f5757; border: none"
+                      style=" border: none"
                       name="paymentMethod"
                       type="radio"
                       class="form-check-input"
                       checked=""
-                      required=""
+                      required
                     />
                     <label class="form-check-label" for="credit"
                       >Credit card</label
@@ -364,8 +364,8 @@
                       name="paymentMethod"
                       type="radio"
                       class="form-check-input"
-                      required=""
-                      style="background-color: #f9f7f5"
+                      required
+                     
                     />
                     <label class="form-check-label" for="debit"
                       >Debit card</label
@@ -377,8 +377,8 @@
                       name="paymentMethod"
                       type="radio"
                       class="form-check-input"
-                      required=""
-                      style="background-color: #f9f7f5"
+                      required
+                      
                     />
                     <label class="form-check-label" for="paypal">PayPal</label>
                   </div>
@@ -392,7 +392,10 @@
                       class="form-control"
                       id="cc-name"
                       placeholder=""
-                      required=""
+                      pattern="[A-Za-z ]+"
+    title="Please enter a valid name (only letters and spaces)."
+                      
+                      required
                     />
                     <small class="text-body-secondary"
                       >Full name as displayed on card</small
@@ -405,11 +408,12 @@
                       >Credit card number</label
                     >
                     <input
-                      type="text"
+                      type="tel"
                       class="form-control"
                       id="cc-number"
                       placeholder=""
-                      required=""
+                      maxlength="16"
+                      required
                     />
                     <div class="invalid-feedback">
                       Credit card number is required
@@ -417,15 +421,15 @@
                   </div>
 
                   <div class="col-md-3">
-                    <label for="cc-expiration" class="form-label"
+                    <label  for="cc-expiration" class="form-label"
                       >Expiration</label
                     >
                     <input
-                      type="text"
+                      type="date"
                       class="form-control"
                       id="cc-expiration"
                       placeholder=""
-                      required=""
+                      required
                     />
                     <div class="invalid-feedback">Expiration date required</div>
                   </div>
@@ -433,11 +437,12 @@
                   <div class="col-md-3">
                     <label for="cc-cvv" class="form-label">CVV</label>
                     <input
-                      type="text"
+                      type="tel"
                       class="form-control"
                       id="cc-cvv"
                       placeholder=""
-                      required=""
+                      maxlength="3"
+                      required
                     />
                     <div class="invalid-feedback">Security code required</div>
                   </div>
@@ -445,7 +450,7 @@
 
                 <hr class="my-4" />
 
-                <button class="w-100 checkout-btn btn btn-lg" type="submit">
+                <button id="checkoutorderbtn" class="w-100 checkout-btn btn btn-lg" type="submit">
                   Continue to checkout
                 </button>
               </form>
