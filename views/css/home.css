@@ -21,7 +21,7 @@ body {
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 50.5%;
     overflow-x: hidden;
 }
 
@@ -1289,12 +1289,12 @@ html{
 }
 
 
-
 }
 
 
 
 
+/* 
 @media screen and (min-width: 990px) {
 html{
     font-size: 60%;
@@ -1303,7 +1303,7 @@ body{
     margin: 0 2rem;
 }
 .list-items-card .card{
-    /* left: 3rem!important; */
+    
     margin-right: 1rem;
 }
 .list-items-card{
@@ -1317,7 +1317,7 @@ body{
     height: 40rem;
 
 }
-}
+} */
 /* login form end */
 
 
@@ -1328,7 +1328,13 @@ body{
 }
 
 
-
+/* productlist change css media  */
+@media screen and (max-width:597) {
+    .product-right-container {
+        
+        margin: 6rem;
+    }
+}
 
 /* home page start */
 

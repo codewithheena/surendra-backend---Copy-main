@@ -32,11 +32,27 @@ let displayproduct = async (allcheckcat = []) => {
       allcheckcat = allCat;
     }
     if (allcheckcat.includes(element.category)) {
+      let originalTitle = element.title;
+      function truncateString(inputString, words) {
+        // Split the string into an array of words
+        const wordArray = inputString.split(' ');
+      
+        // Slice the array to get the first 'words' elements
+        const truncatedArray = wordArray.slice(0, words);
+      
+        // Join the array back into a string
+        const truncatedString = truncatedArray.join(' ');
+      
+        return truncatedString;
+      }
+      
+      // Truncate the title to the first 20 words
+      let truncatedTitle = truncateString(originalTitle, 5);
       productdiv.innerHTML += ` <div class="product-div">
                                    <a href="/productpage?id=${
                                      element.id
                                    }"><img src=${element.image} alt=""></a>
-                                  <span>${element.title}</span>
+                                   <span>${truncatedTitle}</span>
                                     <div class="rating-price">
                                         <div class="rating">
                                           
